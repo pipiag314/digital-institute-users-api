@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users API</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+      defer></script>
+  </head>
+  <body>
+    <header class="d-flex justify-content-center py-3 bg-white">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+        <li class="nav-item">
+          <a href="posts.html" class="nav-link">Posts</a>
+        </li>
+      </ul>
+    </header>
+    <section class="form-section">
+      <form id="user-form" class="form-container">
+        <!-- <h2 class="form-title">Registration<span class="stroke"></span></h2> -->
+        <input required type="text" id="name" placeholder="Enter your name" />
+        <input
+          required
+          type="lastname"
+          id="lastname"
+          placeholder="Enter your last name"
+          name="lastname" />
+        <input
+          required
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          name="email" />
+        <input
+          required
+          type="password"
+          id="password"
+          placeholder="Create your password"
+          name="password" />
+        <input
+          required
+          type="password"
+          id="repeatPassword"
+          placeholder="Repeat your password"
+          name="repeatPassword" />
+        <label id="error" class="error hidden">Password's doesn't match</label>
+        <div class="checkbox-container">
+          <input type="checkbox" id="addAndFetch" name="addAndFetch" />
+          <label class="checkbox-label" for="addAndFetch"
+            >Add and fetch user immediately!</label
+          >
+        </div>
+        <button id="submit-btn" class="submit-btn" type="submit">
+          Add User
+        </button>
+      </form>
+      <h1 class="section-title">
+        Create <br />
+        New User <br />
+        In Database
+      </h1>
+    </section>
+
+    <section class="users-table-section">
+      <button id="fetch-users-btn" class="fetch-users-btn" role="button">
+        FETCH USERS
+      </button>
+      <table class="users-table">
+        <tr>
+          <th>N</th>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Actions</th>
+        </tr>
+      </table>
+      <div id="loader" class="loader hidden"></div>
+    </section>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
